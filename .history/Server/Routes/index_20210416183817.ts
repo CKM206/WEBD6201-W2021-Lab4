@@ -3,6 +3,9 @@ import express from 'express';
 const router = express.Router();
 export default router;
 
+// Create User Model Instance
+import User from '../Models/user';
+
 // Index Controller Instance
 import { DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayLoginPage, 
          DisplayProjectsPage, DisplayRegisterPage, DisplayServicesPage, ProcessLoginPage, 

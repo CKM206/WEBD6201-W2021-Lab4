@@ -1,0 +1,63 @@
+<div class="row justify-content-around about-background mt-3">
+  
+  
+  <div class="col-4 p-2 mt-3">
+    <h2>Calvin May</h2>
+    <a href="/about">
+      <img src="Assets/Pictures/Calvin.jpg" class="headshot-portrait-nowrap" alt="Headshot of Calvin" />
+    </a>
+    <div class="text-end">
+      <a  href="mailto:CalvinKyleMay@gmail.com" class="btn btn-primary">CalvinKyleMay@gmail.com</a>
+    </div>
+  </div>
+  
+  <div class="col-4 p-2 mt-3">
+    <h2>Tom Zielinski</h2>
+    <a href="/about">
+      <img src="Assets/Pictures/Tom.jpeg" class="headshot-portrait-nowrap" alt="Headshot of Tom" />
+    </a>
+    <div class="text-end">
+      <a href="mailto:TomZielinski@live.ca" class="btn btn-primary">TomZielinski@live.ca</a>
+
+    </div>
+  </div>
+  
+</div>
+
+<div class="row">
+  <div class="offset-md-3 col-md-6 col-sm-12 p-2 mt-3 form-background">
+    <h1 class="display-4">Contact Us</h1>
+    <div id="messageArea"></div>
+    
+    <form>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Full Name </span>
+        <input id="fullName" type="text" class="form-control" aria-label="Full Name" aria-describedby="Full Name Input"
+        name="fullName" required>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Contact Number</span>
+        <input id="contactNumber" type="tel" class="form-control" aria-label="Contact Number" aria-describedby="Contact Number Input"
+        name="contactNumber" required>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+        <input id="emailAddress" type="email" class="form-control" aria-label="Email Address" aria-describedby="Email Address Input"
+        name="emailAddress" required>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Your Message</span>
+        <textarea id="message" class="form-control" aria-label="With textarea" required></textarea>
+      </div>
+
+      <div class="form-check mb-3">
+        <input id="subscribeCheckbox" class="form-check-input" type="checkbox" value="" name="subscribeCheckbox">
+        <label class="form-check-label" for="subscribeCheckbox"> Subscribe to our Contact List</label>
+      </div>
+      <div class="text-end mt-2">
+        <button id="sendButton" type="button" class="btn btn-primary"><i class="fas fa-envelope fa-lg"></i> Send</button>
+        <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fas fa-undo fa-lg"></i> Cancel</button>
+      </div>
+      
+    </form>
+</div>
