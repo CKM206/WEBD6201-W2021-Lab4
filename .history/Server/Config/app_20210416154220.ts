@@ -93,10 +93,7 @@ app.use(passport.session());
 /** 
  *  Router Configuration
  */
- import {AuthGuard} from '../Util/index';  // Import AuthGuard Function
- app.use('/', indexRouter);
- //app.use('/contact-list', AuthGuard, contactListRouter); // Protect ALL routes in the Contact-list Router
- 
+
 
 /** 
  * Catch 404 Errors 

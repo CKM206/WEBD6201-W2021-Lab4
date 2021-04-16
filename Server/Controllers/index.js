@@ -63,8 +63,6 @@ function ProcessLoginPage(req, res, next) {
                 console.error(err);
                 return next(err);
             }
-            const authToken = index_1.GenerateToken(user);
-            console.log("WHY NO LOG?!?!");
             return res.redirect('/contact-list');
         });
     })(req, res, next);

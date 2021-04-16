@@ -71,32 +71,22 @@ app.use(session
 /** 
  *  Flash Initialization
  */
-app.use(flash());
 
 /** 
  *  Passport Initialization
  */
-app.use(passport.initialize());
-app.use(passport.session());
 
 /** 
  *  Authentication (Local) Strategy
  */
- passport.use(User.createStrategy());
 
 /** 
  *  User Data Serialization & Deserialization
  */
- passport.serializeUser(User.serializeUser());
- passport.deserializeUser(User.deserializeUser());
 
 /** 
  *  Router Configuration
  */
- import {AuthGuard} from '../Util/index';  // Import AuthGuard Function
- app.use('/', indexRouter);
- //app.use('/contact-list', AuthGuard, contactListRouter); // Protect ALL routes in the Contact-list Router
- 
 
 /** 
  * Catch 404 Errors 

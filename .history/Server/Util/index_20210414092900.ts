@@ -2,9 +2,7 @@ import express, {Request, Response, NextFunction} from 'express';
 import jwt from 'jsonwebtoken';
 import * as DBConfig from '../Config/db';
 
-/** 
- *  Helper Function
- */
+// Helper Function
 export function UserDisplayName(req: Request): string
 {
     if (req.user)
@@ -15,9 +13,7 @@ export function UserDisplayName(req: Request): string
     return '';
 }
 
-/** 
- *  Authentication Guard
- */
+// Authentication Guard
 export function AuthGuard(req: Request, res: Response, next: NextFunction): void
 {
     if (!req.isAuthenticated())
@@ -26,4 +22,22 @@ export function AuthGuard(req: Request, res: Response, next: NextFunction): void
 
     }
     next();
+}
+
+export function GenerateToken(user: UserDocument): string
+{
+    const payload = 
+        {
+            id: user._id,
+            displayName: user.displayName,
+            username: user.username,
+            emailAddress: user.emailAddress
+        }
+
+    const jwtOptions = 
+        {
+            expiresIn: 60480 // Expires in 1 week
+        }
+
+    return jwt.sign(payload, DBConfig.Secret, jwtOptions);    
 }

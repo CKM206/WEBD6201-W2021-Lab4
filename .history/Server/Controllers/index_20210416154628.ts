@@ -135,8 +135,13 @@ export function ProcessRegisterPage(req:Request, res:Response, next:NextFunction
             return res.redirect('/register');
         }
 
+        // If we used a Front-End (Anglular, React, Vue)
+        //return res.json({success: true, msg: 'User Registered in Successfully!'});
+
+        // Since we done use a front end, just authenticate and redirect
         // Automatically Authenticate the User
         return passport.authenticate('local')(req, res, () => {
+            //return res.json({success: true, msg: 'User Logged in Successfully!', user: newUser, token: GenerateToken(user)});
             return res.redirect('/contact-list');
         });
 

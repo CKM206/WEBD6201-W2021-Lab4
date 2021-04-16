@@ -6,7 +6,6 @@ import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
-import mongoose from 'mongoose';
 
 /** 
  *  Authentication Modules
@@ -31,72 +30,19 @@ const app = express();
 export default app;
 
 /** 
- *  Database Configuration
- */
- import * as DBConfig from './db';
- //- REMOTE DATABASE CONNECTION
- mongoose.connect(DBConfig.RemoteURI, {useNewUrlParser: true, useUnifiedTopology: true});
- //- LOCAL DATABASE CONNECTION
- //mongoose.connect(DBConfig.LocalURI, {useNewUrlParser: true, useUnifiedTopology: true});
- 
- const db = mongoose.connection;
- db.on('error', console.error.bind(console, 'connection error:'));
- db.once('open', function() {
-   console.log(`Connected to MongoDB at: ${DBConfig.Host}`);
- });
-
-/** 
  *  View Engine Setup
  */
+app.set('views', path.join(__dirname, '../Views/'));  // Views is accessible from the 'views' path
 app.set('view engine', 'ejs');
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-// Fix Pathing
-app.set('views', path.join(__dirname, '../Views/'));  // Views is accessible from the 'views' path
 app.use(express.static(path.join(__dirname, '../../Client/')));
 app.use(express.static(path.join(__dirname, '../../node_modules/')));
 
-/** 
- *  Express Setup
- */
-app.use(session
-  ({
-    secret: DBConfig.Secret,
-    saveUninitialized: false,
-    resave: false
-}));
-
-/** 
- *  Flash Initialization
- */
-app.use(flash());
-
-/** 
- *  Passport Initialization
- */
-app.use(passport.initialize());
-app.use(passport.session());
-
-/** 
- *  Authentication (Local) Strategy
- */
- passport.use(User.createStrategy());
-
-/** 
- *  User Data Serialization & Deserialization
- */
- passport.serializeUser(User.serializeUser());
- passport.deserializeUser(User.deserializeUser());
-
-/** 
- *  Router Configuration
- */
- import {AuthGuard} from '../Util/index';  // Import AuthGuard Function
- app.use('/', indexRouter);
- //app.use('/contact-list', AuthGuard, contactListRouter); // Protect ALL routes in the Contact-list Router
- 
+app.use('/', indexRouter);
 
 /** 
  * Catch 404 Errors 

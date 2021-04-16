@@ -95,7 +95,7 @@ app.use(passport.session());
  */
  import {AuthGuard} from '../Util/index';  // Import AuthGuard Function
  app.use('/', indexRouter);
- //app.use('/contact-list', AuthGuard, contactListRouter); // Protect ALL routes in the Contact-list Router
+ app.use('/contact-list', AuthGuard, contactListRouter); // Protect ALL routes in the Contact-list Router
  
 
 /** 

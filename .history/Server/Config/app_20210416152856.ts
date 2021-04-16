@@ -58,45 +58,7 @@ app.set('views', path.join(__dirname, '../Views/'));  // Views is accessible fro
 app.use(express.static(path.join(__dirname, '../../Client/')));
 app.use(express.static(path.join(__dirname, '../../node_modules/')));
 
-/** 
- *  Express Setup
- */
-app.use(session
-  ({
-    secret: DBConfig.Secret,
-    saveUninitialized: false,
-    resave: false
-}));
-
-/** 
- *  Flash Initialization
- */
-app.use(flash());
-
-/** 
- *  Passport Initialization
- */
-app.use(passport.initialize());
-app.use(passport.session());
-
-/** 
- *  Authentication (Local) Strategy
- */
- passport.use(User.createStrategy());
-
-/** 
- *  User Data Serialization & Deserialization
- */
- passport.serializeUser(User.serializeUser());
- passport.deserializeUser(User.deserializeUser());
-
-/** 
- *  Router Configuration
- */
- import {AuthGuard} from '../Util/index';  // Import AuthGuard Function
- app.use('/', indexRouter);
- //app.use('/contact-list', AuthGuard, contactListRouter); // Protect ALL routes in the Contact-list Router
- 
+app.use('/', indexRouter);
 
 /** 
  * Catch 404 Errors 
