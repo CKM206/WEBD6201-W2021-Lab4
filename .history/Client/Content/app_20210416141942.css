@@ -5,10 +5,13 @@
  *   Document: app.css
 */
 /* Custom css page */
-.mainBody{
+content{
+    background-image: "../Assets/Pictures/Toronto.jpg";
+}
+body{
     width:100vw;
     height:100vh;
-    background: url("../Assets/Pictures/Toronto.jpg") no-repeat center center fixed;
+    background: url("../Pictures/Toronto.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

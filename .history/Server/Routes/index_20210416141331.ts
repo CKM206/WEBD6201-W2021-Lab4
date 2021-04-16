@@ -4,7 +4,7 @@ const router = express.Router();
 export default router;
 
 // Contact Model
-//import Contact from "../Models/contact"; // Contact Alias
+import Contact from "../Models/contact"; // Contact Alias
 
 // Index Controller Instance
 import { DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayLoginPage, 

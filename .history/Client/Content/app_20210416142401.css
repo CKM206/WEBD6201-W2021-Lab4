@@ -6,6 +6,9 @@
 */
 /* Custom css page */
 .mainBody{
+    background: url("../Assets/Pictures/Toronto.jpg") no-repeat center center fixed;
+}
+.container{
     width:100vw;
     height:100vh;
     background: url("../Assets/Pictures/Toronto.jpg") no-repeat center center fixed;
