@@ -9,63 +9,42 @@ import { DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayLoginPage
          ProcessLogoutPage, ProcessRegisterPage } from "../Controllers/index";
 
 /************************ 
- * GET Page Requests (Displaying)
+ * GET Page Requests
  ************************/
 
-/**
- * Display The Home Page
- */
+/* GET home (/) page - with / */
 router.get('/', DisplayHomePage);
 
-/**
- * Display The Home Page
- */
+/* GET home page - with /home */
 router.get('/home', DisplayHomePage);
 
-/**
- * Display The About Page
- */
+/* GET about page - with /about */
 router.get('/about', DisplayAboutPage);
 
-/**
- * Display The Services Page
- */
+/* GET services page - with /services */
 router.get('/services', DisplayServicesPage);
 
-/**
- * Display The Projects Page
- */
+/* GET projects page - with /projects */
 router.get('/projects', DisplayProjectsPage);
 
-/**
- * Display The Contact-Us Page
- */
+/* GET contact page - with /contact */
 router.get('/contact', DisplayContactPage);
 
-/**
- * Display The Login Page
- */
+/* GET login page - with /login */
 router.get('/login', DisplayLoginPage);
 
-/**
- * Display The Register Page
- */
+/* GET register page - with /register */
 router.get('/register', DisplayRegisterPage);
 
 /************************ 
- * POST Page Requests (Processing)
+ * POST Page Requests
  ************************/
-/**
- * Process The Login Page
- */
+
+/* POST Login page - with /login */
 router.post('/login', ProcessLoginPage);
 
-/**
- * Process The Logout "Page"
- */
+/* Process logout page - with /logout */
 router.get('/logout', ProcessLogoutPage);
 
-/**
- * Process The Register Page
- */
+/* POST Register page - with /register */
 router.post('/register', ProcessRegisterPage);

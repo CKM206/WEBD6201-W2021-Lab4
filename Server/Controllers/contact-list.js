@@ -9,7 +9,7 @@ const index_1 = require("../Util/index");
 function DisplayContactListPage(req, res, next) {
     contact_1.default.find(function (err, contacts) {
         if (err) {
-            return console.error(err);
+            return console.error("err");
         }
         return res.render('index', { title: 'Contact List', page: 'contact-list', contacts: contacts, displayName: index_1.UserDisplayName(req) });
     });

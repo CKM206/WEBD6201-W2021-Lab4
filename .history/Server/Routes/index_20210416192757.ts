@@ -55,17 +55,14 @@ router.get('/register', DisplayRegisterPage);
 /************************ 
  * POST Page Requests (Processing)
  ************************/
+
 /**
- * Process The Login Page
+ * Display The
  */
 router.post('/login', ProcessLoginPage);
 
-/**
- * Process The Logout "Page"
- */
+/* Process logout page - with /logout */
 router.get('/logout', ProcessLogoutPage);
 
-/**
- * Process The Register Page
- */
+/* POST Register page - with /register */
 router.post('/register', ProcessRegisterPage);

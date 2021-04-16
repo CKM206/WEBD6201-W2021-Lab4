@@ -9,7 +9,7 @@ import { DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayLoginPage
          ProcessLogoutPage, ProcessRegisterPage } from "../Controllers/index";
 
 /************************ 
- * GET Page Requests (Displaying)
+ * GET Page Requests
  ************************/
 
 /**
@@ -53,19 +53,14 @@ router.get('/login', DisplayLoginPage);
 router.get('/register', DisplayRegisterPage);
 
 /************************ 
- * POST Page Requests (Processing)
+ * POST Page Requests
  ************************/
-/**
- * Process The Login Page
- */
+
+/* POST Login page - with /login */
 router.post('/login', ProcessLoginPage);
 
-/**
- * Process The Logout "Page"
- */
+/* Process logout page - with /logout */
 router.get('/logout', ProcessLogoutPage);
 
-/**
- * Process The Register Page
- */
+/* POST Register page - with /register */
 router.post('/register', ProcessRegisterPage);

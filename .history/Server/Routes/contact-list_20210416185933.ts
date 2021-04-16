@@ -1,4 +1,6 @@
-// Express Configuration
+/**
+ * Configure for Express
+ */
 import express from 'express';
 import { DisplayContactListPage, DisplayEditPage, ProcessEditPage, 
          DisplayAddPage, ProcessAddPage, ProcessDeletePage  } 
@@ -6,44 +8,42 @@ import { DisplayContactListPage, DisplayEditPage, ProcessEditPage,
 const router = express.Router();
 export default router;
 
-/************************ 
- * GET Page Requests (Displaying)
- ************************/
 
+/************************ 
+ * Display Page Functions (GET REQUESTS)
+ ************************/
 /**
- * Display the Contact-List Page
+ * Display Contact-List Page
  */
 router.get('/', DisplayContactListPage);
+//router.get('/contact-list', DisplayContactListPage);
 
 /**
- * Display the Update Page: EDIT
+ * Display the Update Page, EDITING
  */
 router.get('/edit/:id', DisplayEditPage);
 
 /**
- * Display the Update Page ADD
- */
-router.get('/add', DisplayAddPage);
-
-/**
- * "Display" The Delete Page
+ * Delete "Page"
  */
 router.get('/delete/:id', ProcessDeletePage);
 
+/**
+ * Display the Update Page, ADDING
+ */
+router.get('/add', DisplayAddPage);
+
 
 /************************ 
- * POST Page Requests (Processing)
+ * Process Page Functions (POST REQUESTS)
  ************************/
 
 /**
- * Process the Update Page, EDIT
+ * Display the Update Page, EDITING
  */
 router.post('/edit/:id', ProcessEditPage);
 
 /**
- * Process the Update Page, ADD
+ * Display the Update Page, ADDING
  */
 router.post('/add', ProcessAddPage);
-
-
-

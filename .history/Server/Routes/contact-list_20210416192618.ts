@@ -7,7 +7,7 @@ const router = express.Router();
 export default router;
 
 /************************ 
- * GET Page Requests (Displaying)
+ * GET Page Requests 
  ************************/
 
 /**
@@ -32,7 +32,7 @@ router.get('/delete/:id', ProcessDeletePage);
 
 
 /************************ 
- * POST Page Requests (Processing)
+ * POST Page Requests
  ************************/
 
 /**

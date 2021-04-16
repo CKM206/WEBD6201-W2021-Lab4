@@ -1,13 +1,12 @@
 // Express Configuration
 import express from 'express';
 import { DisplayContactListPage, DisplayEditPage, ProcessEditPage, 
-         DisplayAddPage, ProcessAddPage, ProcessDeletePage  } 
-         from '../Controllers/contact-list';
+         DisplayAddPage, ProcessAddPage, ProcessDeletePage  } from '../Controllers/contact-list';
 const router = express.Router();
 export default router;
 
 /************************ 
- * GET Page Requests (Displaying)
+ * Get Page Requests
  ************************/
 
 /**
@@ -32,7 +31,7 @@ router.get('/delete/:id', ProcessDeletePage);
 
 
 /************************ 
- * POST Page Requests (Processing)
+ * Post Page Requests
  ************************/
 
 /**
