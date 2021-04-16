@@ -1,0 +1,21 @@
+{
+  "name": "WEBD6201-W2021-Lab4",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "description": "This is a Demo Website create for Lab 4 of Webd6201 Client Side Scripting",
+  "main": "server.js",
+  "repository": "https://github.com/CKM206/WEBD6201-W2021-Lab4",
+  "author": "Calvin May",
+  "license": "MIT"
+}
