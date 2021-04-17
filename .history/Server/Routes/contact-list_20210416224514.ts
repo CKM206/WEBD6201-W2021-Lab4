@@ -11,9 +11,9 @@
  *                GET requests often just render the page, while POST requests often
  *                require some back-end logic to take place before rendering.
  * 
- *               ALL logic & rendering actually takes place in the related Controller 
- *               file, this file simple handles the route, and calls the method from 
- *               the Controller.
+  *               ALL logic actually takes place in the related Controller file, this
+ *                file simple handles the route, and calls the method from the 
+ *                Controller.
  */
 
 // Express Configuration

@@ -4,7 +4,7 @@
  *  
  *    Date:     04/16/2021
  *    Purpose:  Built as apart of a Demo WebSite for Lab 4 of WEBD-6201 W2021
- *    Document: app.ts
+ *    Document: Server.ts
  *    Description: This File is responsible for configuring the App. This File connects
  *                the rest of the Project so that the entire Application works as
  *                intended.

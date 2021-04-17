@@ -26,9 +26,7 @@ export function UserDisplayName(req: Request): string
 }
 
 /** 
- *  Authentication Guard - Checks if a user is authenticate, if not redirects them to
- *                       the logic page. If they are, it calls the next function which
- *                       will normally display a page.
+ *  Authentication Guard
  */
 export function AuthGuard(req: Request, res: Response, next: NextFunction): void
 {
