@@ -40,7 +40,8 @@ function DisplayLoginPage(req, res, next) {
 exports.DisplayLoginPage = DisplayLoginPage;
 function DisplayRegisterPage(req, res, next) {
     if (!req.user)
-        return res.render('index', { title: 'Register',
+        return res.render('index', {
+            title: 'Register',
             page: 'register',
             messages: req.flash('registerMessage'),
             displayName: index_1.UserDisplayName(req)
@@ -86,9 +87,10 @@ function ProcessRegisterPage(req, res, next) {
             if (err.name == "UserExistsError") {
                 req.flash('registerMessage', 'Registration Error');
                 console.error('Error: User Already Exists');
+                return res.redirect('/register');
             }
-            return res.redirect('/register');
         }
+        console.error('MADE IT HERE');
         return passport_1.default.authenticate('local')(req, res, () => {
             return res.redirect('/contact-list');
         });

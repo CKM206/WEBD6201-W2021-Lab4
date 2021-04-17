@@ -132,8 +132,8 @@ export function ProcessRegisterPage(req:Request, res:Response, next:NextFunction
             {
                 req.flash('registerMessage', 'Registration Error');
                 console.error('Error: User Already Exists');
-                return res.redirect('/register');
             }
+            return res.redirect('/register');
         }
         console.error('MADE IT HERE');
         // Automatically Authenticate the User

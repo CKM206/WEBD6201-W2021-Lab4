@@ -120,7 +120,7 @@ export function ProcessRegisterPage(req:Request, res:Response, next:NextFunction
     ({
         username: req.body.Username,
         emailAddress: req.body.EmailAddress,
-        displayName: req.body.FirstName + " " + req.body.LastName 
+        displayName: req.body.FirstName + " " + req.body.LastName
     });
 
     User.register(newUser, req.body.Password, (err) => {
@@ -128,17 +128,16 @@ export function ProcessRegisterPage(req:Request, res:Response, next:NextFunction
         if (err)
         {
             console.error('Error: Inserting New User');
-            if(err.name == "UserExistsError")
+            if (err.name == "UserExistsError")
             {
                 req.flash('registerMessage', 'Registration Error');
                 console.error('Error: User Already Exists');
-                return res.redirect('/register');
             }
+            return res.redirect('/register');
         }
         console.error('MADE IT HERE');
         // Automatically Authenticate the User
-        return passport.authenticate('local')(req, res, ()=>
-        {
+        return passport.authenticate('local')(req, res, () => {
             return res.redirect('/contact-list');
         });
     });
