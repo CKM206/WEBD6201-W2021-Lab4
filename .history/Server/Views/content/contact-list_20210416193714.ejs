@@ -9,10 +9,9 @@
               <thead class="table-dark">
                 <tr>
                   <th scope="col" class="text-center">#</th>
-                  <th scope="col">First Name</th>
-                  <th scope="col">Last Name</th>
-                  <th scope="col">Email Address</th>
+                  <th scope="col">Full Name</th>
                   <th scope="col">Contact Number</th>
+                  <th scope="col">Email Address</th>
                   <th></th>
                   <th></th>
                 </tr>
@@ -21,7 +20,7 @@
 
               <% for(let count = 0; count < contacts.length; count++) { %>
 
-              <tr class="form-background">
+              <tr>
                 <th scope="row" class="text-center"><%= count + 1 %></th>
                 <td><%= contacts[count].FirstName %></td>
                 <td><%= contacts[count].LastName %></td>

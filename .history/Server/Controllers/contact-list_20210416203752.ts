@@ -52,7 +52,7 @@ import {UserDisplayName } from '../Util/index';
      }
  
      // show the edit view
-     return res.render('index', { title: 'Edit', page: 'update', contact: contactToEdit,  displayName: UserDisplayName(req) });
+     return res.render('index', { title: 'Edit', page: 'edit', contact: contactToEdit,  displayName: UserDisplayName(req) });
    });
  }
 

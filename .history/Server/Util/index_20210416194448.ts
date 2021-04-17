@@ -1,4 +1,6 @@
 import express, {Request, Response, NextFunction} from 'express';
+import jwt from 'jsonwebtoken';
+import * as DBConfig from '../Config/db';
 
 /** 
  *  Helper Function

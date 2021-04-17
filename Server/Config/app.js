@@ -66,7 +66,7 @@ passport_1.default.serializeUser(user_1.default.serializeUser());
 passport_1.default.deserializeUser(user_1.default.deserializeUser());
 const index_2 = require("../Util/index");
 app.use('/', index_1.default);
-app.use('/contact-list', index_2.TestFunction, index_2.AuthGuard, contact_list_1.default);
+app.use('/contact-list', index_2.AuthGuard, contact_list_1.default);
 app.use(function (req, res, next) {
     next(http_errors_1.default(404));
 });
