@@ -1,6 +1,6 @@
 
 
-        <div class="row justify-content-lg-center g-3 mt-3 form-background">
+        <div class="row justify-content-lg-center g-3 form-background">
           <h1><%= title %> Contact</h1>
           <div id="messageArea"></div>
           <form method="POST" class="col-lg-6 col-md-10 col-sm-10">
@@ -36,10 +36,5 @@
             <% } %>
 
             <a href="/contact-list" id="cancelButton" type="button" class="btn btn-warning"><i class="fas fa-undo fa-lg"></i> Cancel</a>
-          
-            <% if(title == "Edit") { %>
-              <td class="text-center"><a href="/contact-list/delete/<%= contact._id %>" class="btn btn-danger btn-sm delete"><i class="fas fa-trash-alt fa-sm"></i> Delete</a></td>
-            <% } %>
-          
           </form>
         </div>
