@@ -1,0 +1,95 @@
+/* Author(s): Tom Zielinski 100559389,
+ *             Calvin May 100745125
+ * 
+ *   Date: 02/02/2021 | Last Modified: 04/16/2021
+ *   Document: app.css
+*/
+/* Custom css page */
+.mainBody {
+  width: 100vw;
+  height: 100vh;
+  background: url("../Assets/Pictures/Toronto.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-x: hidden;
+  margin: 0px;
+  min-height: 100%;
+  background-color: gray;
+}
+
+
+.headshot-portrait {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle();
+  margin: 10px 10px 15px 0px;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 500%;
+  float: left;
+  shape-outside: circle();
+  margin: 0px 10px 0px 0px;
+}
+.headshot-portrait-nowrap {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  shape-outside: circle();
+  margin: 10px 10px 15px 0px;
+}
+
+.about-background {
+  border-radius: 1rem;
+  background: rgba(210, 210, 210, 0.4);
+}
+
+.form-background {
+  border-radius: 1rem;
+  background: rgba(216, 216, 216, 0.652);
+}
+
+.projectOnePic,
+.projectThreePic {
+  height: 200px;
+  float: left;
+}
+
+.projectTwoPic {
+  height: 200px;
+  float: Right;
+}
+
+.serviceOnePic,
+.serviceThreePic {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  float: left;
+  margin: 10px;
+}
+
+.serviceTwoPic {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  float: Right;
+  margin: 10px;
+}
+
+#project1,
+#project2,
+#project3 {
+  height: 200px;
+}
+#service1,
+#service2,
+#service3 {
+  height: 220px;
+}

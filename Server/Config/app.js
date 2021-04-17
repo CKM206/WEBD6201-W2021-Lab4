@@ -72,8 +72,9 @@ app.use(function (req, res, next) {
 });
 app.use(function (err, req, res, next) {
     let message = err.message;
+    let type = err.statusCode;
     let error = req.app.get('env') === 'development' ? err : {};
     res.status(err.status || 500);
-    res.render('error', { message: message, error: error, title: '', page: '', displayName: '' });
+    res.render('index', { message: message, error: error, type: type, title: '', page: '404', displayName: '' });
 });
 //# sourceMappingURL=app.js.map
